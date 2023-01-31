@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="?attr/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainLayout"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:id="@+id/playerOneLayout"
+            android:background="@drawable/custom_background"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/x_icon"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerOneName"
+                android:text="player one"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="?android:textColorPrimary"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/score_background"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerOneScore"
+                android:text="0"
+                android:layout_weight="1.5"
+                android:textSize="25sp"
+                android:gravity="center|end"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="?attr/colorSurfaceVariant"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerTwoScore"
+                android:text="0"
+                android:layout_weight="1.5"
+                android:textSize="25sp"
+                android:gravity="center|start"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:id="@+id/playerTwoLayout"
+            android:background="@drawable/custom_background"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/o_icon"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerTwoName"
+                android:text="player two"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="?android:textColorPrimary"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainLayout"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstLayout"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_0"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_1"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_2"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/secondLayout"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/firstLayout">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_3"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_4"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_5"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/thirdLayout"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/secondLayout">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_6"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_7"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:id="@+id/btn_8"
+                android:background="@drawable/custom_background"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:padding="24dp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/buttonHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/button_ripple"
+        android:src="@drawable/home_icon"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/buttonReset"
+        android:background="@drawable/button_ripple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/reset_icon"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
